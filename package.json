@@ -1,0 +1,26 @@
+{
+  "name": "remove-duplicated-file",
+  "version": "1.0.0",
+  "description": "remove duplicated file especially for Moments Photos on Synology",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericdum/Remove-Duplicated-File.git"
+  },
+  "keywords": [
+    "synology",
+    "moments",
+    "duplicated",
+    "file",
+    "clear"
+  ],
+  "author": "mujiang",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ericdum/Remove-Duplicated-File/issues"
+  },
+  "homepage": "https://github.com/ericdum/Remove-Duplicated-File#readme"
+}

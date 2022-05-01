@@ -6,12 +6,17 @@ const fs = require('fs-extra');
 
 program
   .arguments('<targetDir> <trashDir>')
-  .action(async function (targetDir, trashDir) {
+  .option('-s, --skip <n>', 'Use to skip first <n> files which are known sizes')
+  .option('--doit', 'Actually to do the MOVE! or just for check')
+  .option('-v', 'Show all Files')
+  .option('-k, --keep <sub_path>', 'keep files which contain <sub_path>')
+  .action(async function (targetDir, trashDir, options) {
     targetDir = await ensureDir(targetDir)
     trashDir = await ensureDir(trashDir, true)
 
     console.log(chalk.blue('[Start] to clean:'), targetDir, chalk.yellow('Save to: '+ trashDir))
-    await clearTheDir(targetDir, trashDir)
+    await clearTheDir(targetDir, trashDir, options)
+	  process.exit(0)
   });
 
 program.parse(process.argv);
